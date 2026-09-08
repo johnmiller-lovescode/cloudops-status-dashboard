@@ -354,31 +354,28 @@ resource "aws_iam_openid_connect_provider" "github" {
 resource "aws_iam_role" "github_actions" {
   name = "cloudops-github-actions"
 
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17"
+assume_role_policy = jsonencode({
+  Version = "2012-10-17"
 
-    Statement = [
-      {
-        Effect = "Allow"
+  Statement = [
+    {
+      Effect = "Allow"
 
-        Principal = {
-          Federated = aws_iam_openid_connect_provider.github.arn
-        }
+      Principal = {
+        Federated = aws_iam_openid_connect_provider.github.arn
+      }
 
-        Action = "sts:AssumeRoleWithWebIdentity"
+      Action = "sts:AssumeRoleWithWebIdentity"
 
-        Condition = {
-          StringEquals = {
-            "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
-          }
-
-          StringLike = {
-            "token.actions.githubusercontent.com:sub" = "repo:johnmiller-lovescode/cloudops-status-dashboard:*"
-          }
+      Condition = {
+        StringEquals = {
+          "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
+          "token.actions.githubusercontent.com:sub" = "repo:johnmiller-lovescode/cloudops-status-dashboard:ref:refs/heads/main"
         }
       }
-    ]
-  })
+    }
+  ]
+})
 
   tags = {
     Project = "cloudops-dashboard"
