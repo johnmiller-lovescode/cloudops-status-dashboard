@@ -419,9 +419,12 @@ resource "aws_iam_policy" "github_actions_deploy" {
         Effect = "Allow"
 
         Action = [
-          "ecs:UpdateService",
-          "ecs:DescribeServices"
-        ]
+  "ecs:UpdateService",
+  "ecs:DescribeServices",
+  "ecs:DescribeTaskDefinition",
+  "ecs:RegisterTaskDefinition",
+  "iam:PassRole"
+]
 
         Resource = "*"
       }
