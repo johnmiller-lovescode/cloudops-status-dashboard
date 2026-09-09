@@ -256,7 +256,7 @@ def dashboard():
             <div class="header">
                 <h1>CloudOps Status Dashboard</h1>
                 <div class="subtitle">
-                    Real-time service health monitoring
+                    Automated cloud service health monitoring
                 </div>
             </div>
 
