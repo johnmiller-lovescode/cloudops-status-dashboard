@@ -370,7 +370,7 @@ assume_role_policy = jsonencode({
       Condition = {
         StringEquals = {
           "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
-          "token.actions.githubusercontent.com:sub" = "repo:johnmiller-lovescode/cloudops-status-dashboard:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub" = "repo:johnmiller-lovescode@180470236/cloudops-status-dashboard@1361432894:ref:refs/heads/main"
         }
       }
     }
