@@ -135,7 +135,7 @@ cloudops-status-dashboard/
 ├── main.py
 ├── requirements.txt
 └── README.md
-
+```
 ## Author
 
 John Miller
