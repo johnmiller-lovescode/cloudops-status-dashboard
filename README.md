@@ -136,6 +136,32 @@ cloudops-status-dashboard/
 ├── requirements.txt
 └── README.md
 ```
+## What I Learned
+
+This project provided hands-on experience with:
+
+- Designing AWS infrastructure using Terraform
+- Deploying containerized applications with ECS Fargate
+- Configuring load balancing and health checks
+- Managing Docker images with Amazon ECR
+- Implementing IAM roles and policies
+- Using GitHub OIDC for secure AWS authentication
+- Building automated CI/CD workflows with GitHub Actions
+- Managing ECS task definition revisions
+- Troubleshooting container health and deployment issues
+- Monitoring workloads with CloudWatch
+
+## Future Improvements
+
+Potential enhancements include:
+
+- HTTPS using AWS Certificate Manager
+- Custom domain configuration with Route 53
+- CloudWatch alarms and notifications
+- Automated application testing within the CI/CD pipeline
+- Historical uptime and latency metrics
+
+
 ## Author
 
 John Miller
