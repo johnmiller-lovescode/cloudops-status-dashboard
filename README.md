@@ -148,6 +148,10 @@ cloudops-status-dashboard/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml
+├── assets/
+│   ├── dashboard.png
+│   ├── ecs-service.png
+│   └── github-actions.png
 ├── terraform/
 │   └── main.tf
 ├── Dockerfile
