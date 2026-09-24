@@ -4,6 +4,26 @@ A production-style cloud monitoring application deployed on AWS using containeri
 
 The application continuously checks external services, displays their operational status and response times, and runs as a highly available containerized workload on AWS ECS Fargate.
 
+## Screenshots
+
+### Live Status Dashboard
+
+The deployed application continuously monitors external services and displays their current availability and response times.
+
+![CloudOps Status Dashboard](assets/dashboard.png)
+
+### AWS ECS Deployment
+
+The application runs as two ECS Fargate tasks behind an Application Load Balancer. Both tasks are healthy and the service maintains the desired task count.
+
+![AWS ECS Service](assets/ecs-service.png)
+
+### Automated CI/CD
+
+GitHub Actions builds the Docker image, pushes the versioned image to Amazon ECR, registers a new ECS task definition revision, and updates the running ECS service.
+
+![GitHub Actions Deployment](assets/github-actions.png)
+
 ## Architecture
 
 GitHub
